@@ -12,15 +12,14 @@ A demo is available on [YouTube](https://www.youtube.com/watch?v=Z-1sqJSZoOw).
 
 # Required software
 * [Arduino IDE for desktop](https://www.arduino.cc/)
-* @miguelbalboa's [Arduino RFID library](https://github.com/miguelbalboa/rfid), this one should be available in from the list of libraries in the Arduino library manager already, if not just download the zip copy of the source from GitHub and import.
+* [@miguelbalboa](miguelbalboa)'s [Arduino RFID library](https://github.com/miguelbalboa/rfid), this one should be available in from the list of libraries in the Arduino library manager already, if not just download the zip copy of the source from GitHub and import.
 * [This Arduino esp32 AWS IoT library](https://github.com/ExploreEmbedded/Hornbill-Examples/tree/master/arduino-esp32/AWS_IOT)
 
 # Hardware setup
 ## RFID card setup
-See [this code](https://github.com/miguelbalboa/rfid/blob/master/examples/ReadAndWrite/ReadAndWrite.ino) for some examples of reading and writing to RFID. [This line](https://github.com/miguelbalboa/rfid/blob/c8b922c8a4c26baf1b66924e925401f6c265dfd4/examples/ReadAndWrite/ReadAndWrite.ino#L95) can be used to specify the data blocks to write, which then must match the corresponding `dataBlock[]` in this code.
+See [this code](https://github.com/miguelbalboa/rfid/blob/master/examples/ReadAndWrite/ReadAndWrite.ino) for some examples of reading and writing to RFID. [This line](https://github.com/miguelbalboa/rfid/blob/c8b922c8a4c26baf1b66924e925401f6c265dfd4/examples/ReadAndWrite/ReadAndWrite.ino#L95) can be used to specify the data blocks to write, which then must match the corresponding `dataBlock[]` [in this code](https://github.com/AcrossTheCloud/rfid-codepipeline/blob/master/rfid-to-iot.ino#L104).
 
 ## Pin connections
-
 | esp32        | rfid         |
 | ------------- |-------------|
 | 3(.3)V | VCC |
